@@ -16,5 +16,5 @@ Package: curl-scripts
 Architecture: all
 Depends: curl, ${misc:Depends}
 Description: Scripts for curl
- Contains scripts for curl progress bar and to convert curl exit codes to
- status messages.
+ Contains a script for curl progress bar in terninal. Includes another script
+ to convert curl exit codes to curl status messages. Implemented in bash.
