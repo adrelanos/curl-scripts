@@ -1,7 +1,8 @@
 # Scripts for curl #
 
-Contains scripts for curl progress bar and to convert curl exit codes to
-status messages.
+Contains a script for curl progress bar in terninal. Includes another script
+to convert curl exit codes to curl status messages. Implemented in bash.
+Common code that is often required by other scripts.
 
 (This package description has been [automatically](https://github.com/Whonix/whonix-developer-meta-files/blob/master/debug-steps/packaging-helper-script) extracted and mirrored from `debian/control`.)
 
