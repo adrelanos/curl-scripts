@@ -1,0 +1,199 @@
+commit 4c957d6428469f87aa3a10a078189ee64734736f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Feb 4 00:40:35 2015 +0000
+
+    updated makefile generic to version 1.3
+
+commit 4657292658b80fb94b324a3abcabff8c20f8bc46
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Feb 3 23:58:40 2015 +0000
+
+    Added creation of upstream changelog to debian/rules
+
+commit b8b1b70351db1a7bdc05f2b1de957b4efe279a13
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Wed Jan 7 19:33:40 2015 +0000
+
+    bumped compat from 8 to 9
+
+commit 1f646e387ce2a9bf23d3513f648989d327d6b283
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Dec 5 19:01:11 2014 +0000
+
+    updated generic makefile
+
+commit 9229c1c43a13a1cefb92e5f0dee47f6fd95eaff8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Oct 28 22:35:20 2014 +0000
+
+    makefile: refactoring, avoid using IFS
+
+commit 05713024228757b09084ce68eb83bf159031c4a3
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Oct 25 01:58:51 2014 +0000
+
+    makefile:
+    - make debdist; make undebdist
+    - cleanup
+    - refactoring
+
+commit 3eb2d2e9a37800889a69ba9640b0aa8a3a236db1
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Oct 23 22:43:02 2014 +0000
+
+    makefile:
+    - new target "make undist", which deletes the upstream tarball
+    - $DISTDIR variable for make (un)dist, which defaults to ".." and can be used to create upstream tarballs in arbitrary locations
+    - refactoring, all function names and global variables now start with "make_" to make the script `source`ing friendly
+    - made `source`able
+
+commit f0c4ec5c719b3db9a45d52a06e37fd871ad16f10
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Oct 13 12:36:52 2014 +0000
+
+    readme
+
+commit 38d04b6756288daffd7331c5c275ccae8536bf70
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Aug 19 18:52:37 2014 +0000
+
+    makefile: added new feature "make deb-chl-bumpup" - Bump upstream version number in debian/changelog.
+
+commit f9f84f101740145abdb6eb1a704863d8723241b4
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 17 20:54:23 2014 +0000
+
+    Updated debian/changelog.
+
+commit 41c2f7b069265dfdeb1f1be2bd472f0129c9204c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 17 20:47:26 2014 +0000
+
+    Fixed changelog date.
+
+commit 1d0728ccf707b45c1a37fa9bff0aaaf2f94515f8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Aug 17 18:03:25 2014 +0000
+
+    bump version number
+
+commit d652fdc99cefd692cd50da1d3271f9b366b4698d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Aug 14 13:35:15 2014 +0000
+
+    Implemented make deb-icup: Combination of make deb-pkg, make deb-pkg-install and make deb-pkg-cleanup.
+
+commit 743ffebc86b1d7c29733f9465e361f56d40faf93
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Mon Jul 28 23:25:42 2014 +0000
+
+    readme
+
+commit c76950c4085d9ced89c69cf4b45971dbbe89091a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 27 12:42:25 2014 +0000
+
+    packaging
+
+commit f8a8cddcfb501b3f3cc11766234547e2c8afc6ea
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 27 04:01:10 2014 +0000
+
+    packaging
+
+commit 7b17f7cd8f1151b5396ca7038657d6016fe268b7
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 26 15:26:35 2014 +0000
+
+    packaging
+
+commit cf2d713782b01048078df69f694f39b77f15a8d3
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 26 15:16:03 2014 +0000
+
+    packaging: removed build dependency on git, since the .git folder won't be included in the upstream tarball.
+
+commit fa40536dd8558ced172149d1c3ec22a8b4dce2e6
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 26 14:09:34 2014 +0000
+
+    fix lintian warning
+
+commit 712f2508167d62618cab7328cd77f30d43ccbbd5
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 26 14:08:39 2014 +0000
+
+    fix lintian warning
+
+commit 37cc13c0aa76be7e1865f676f31d9d0bcdb4371d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 12 17:11:00 2014 +0000
+
+    packaging
+
+commit 953c6d2162d83cac1125a1e592bc6980cb1ae815
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 12 15:34:16 2014 +0000
+
+    packaging
+
+commit 30bea53e876fc6537e48c62923192ef5b0010997
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 6 13:23:23 2014 +0000
+
+    use $BASH_SOURCE instead of $0
+
+commit 30c9fa97e6d9f2327af059640880e61204531d3d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat Jul 5 08:09:42 2014 +0000
+
+    Bumped debian revision number to avoid lintian warning "new-package-should-close-itp-bug" so we can use lintian --fail-on-warnings as sanity test.
+
+commit 23a4d4c96e293bd832323634e55eabe2c1635fa9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jun 24 15:45:11 2014 +0000
+
+    added debian epoch; added dotglob
+
+commit ea721845c39fe3a6aba7a16c61c41858426ba03f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Jun 3 18:27:32 2014 +0000
+
+    readme
+
+commit 20a5592fd4d9de5dd8e1d614e6237e8c8d090233
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jun 1 15:38:31 2014 +0000
+
+    readme
+
+commit 8630cd4d8c96b24203f3ad942b6553abd859c18d
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sat May 31 14:37:02 2014 +0000
+
+    # On branch master
+    nothing to commit (working directory clean)
+
+commit 0786e59feeaa4b650b89462c226caef08ec59e91
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 23 22:53:47 2014 +0000
+
+    packaging
+
+commit 09982ee4bac81db5d7f4b90723b03d7a79a266b9
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri May 23 17:30:01 2014 +0000
+
+    .
+
+commit 83378d3ef20cd5944dc6a0652e4c0165b2e08f26
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue May 20 04:35:11 2014 +0000
+
+    .
+
+commit b55a9ade69c3e1f67225339a931b9e5d483a7663
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue May 20 04:31:52 2014 +0000
+
+    .
