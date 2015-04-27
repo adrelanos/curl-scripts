@@ -20,7 +20,7 @@ License: GPL-3+
  License version 3 can be found in the file
  `/usr/share/common-licenses/GPL-3'.
 
-Files: /usr/lib/curl-scripts/curl_exit_codes
+Files: usr/lib/curl-scripts/curl_exit_codes
 Comment: Downloaded from:
          http://packages.debian.org/wheezy/curl
          http://www.webcitation.org/6PnNFZbd1
