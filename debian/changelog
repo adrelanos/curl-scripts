@@ -1,3 +1,9 @@
+curl-scripts (3:1.1-1) unstable; urgency=medium
+
+  * New upstream version (local package).
+
+ -- Patrick Schleizer <adrelanos@riseup.net>  Tue, 25 Aug 2015 14:07:57 +0000
+
 curl-scripts (3:1.0-1) unstable; urgency=low
 
   * New upstream version (local package).
