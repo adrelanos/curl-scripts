@@ -175,24 +175,28 @@ print_progress() {
   # progress bar. (This helps avoid a flicker when following redirects.)
   [ "$length" -gt 8192 ] || return 0
 
-  # Get the width of the terminal and reserve space for the percentage.
-  local columns="$(tput cols)"
-  local width=$(( $columns - 10 ))
-
   # Calculate the progress percentage and the size of the filled and
   # unfilled portions of the progress bar.
   local percent=$(( $bytes * 100 / $length ))
-  local on=$(( $bytes * $width / $length ))
-  local off=$(( $width - $on ))
 
-  # Using ANSI escape sequences, first move the cursor to the beginning
-  # of the line, and then write the percentage. Switch to inverted text
-  # mode and print spaces to represent the filled part of the progress
-  # bar, then reset and print spaces for the remainder of the region.
-  # Finally, move the cursor back one character so it rests at the end of
-  # the progress bar.
-  printf "\x1B[0G %-6s\x1B[7m%*s\x1B[0m%*s\x1B[1D" \
-    "${percent}%" "$on" "" "$off" "" >&4
+  if [ "$TERM" = "" ]; then
+    true
+  else
+    # Get the width of the terminal and reserve space for the percentage.
+    local columns="$(tput cols)"
+    local width=$(( $columns - 10 ))
+    local on=$(( $bytes * $width / $length ))
+    local off=$(( $width - $on ))
+
+    # Using ANSI escape sequences, first move the cursor to the beginning
+    # of the line, and then write the percentage. Switch to inverted text
+    # mode and print spaces to represent the filled part of the progress
+    # bar, then reset and print spaces for the remainder of the region.
+    # Finally, move the cursor back one character so it rests at the end of
+    # the progress bar.
+    printf "\x1B[0G %-6s\x1B[7m%*s\x1B[0m%*s\x1B[1D" \
+      "${percent}%" "$on" "" "$off" "" >&4
+  fi
 
   if [ "$CURL_PRGRS_EXEC" = "" ]; then
     true
