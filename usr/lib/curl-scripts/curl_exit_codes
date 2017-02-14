@@ -117,4 +117,4 @@ curl_exit_codes() {
    exit 0
 }
 
-curl_exit_codes ${1+"$@"}
+curl_exit_codes "$@"
