@@ -122,7 +122,7 @@ trap "signal_sighup" SIGHUP
 # doesn't write any progress information (like when it's invoked with
 # the `--help` or `--version` flag.)
 ( set +e
-  $CURL --trace-ascii "$tracefile" -s ""$@""
+  $CURL --trace-ascii "$tracefile" -s "$@"
 
   curl_exit_code="$?"
 
@@ -143,12 +143,12 @@ unbuffered_sed() {
 
   # GNU sed supports a `-u` option for unbuffered reads.
   if echo | sed -u >/dev/null 2>&1; then
-    sed -nu ""$@"" &
+    sed -nu "$@" &
     wait "$!"
 
   # BSD sed supports a `-l` option for line-buffered reads.
   elif echo | sed -l >/dev/null 2>&1; then
-    sed -nl ""$@"" &
+    sed -nl "$@" &
     wait "$!"
 
   # If we don't have GNU or BSD sed, we can clumsily hack around the
@@ -156,7 +156,7 @@ unbuffered_sed() {
   # large number of trailing spaces.
   else
     local pad="$(printf "\n%512s" "")"
-    sed -ne "s/$/\\${pad}/" ""$@"" &
+    sed -ne "s/$/\\${pad}/" "$@" &
     wait "$!"
   fi
 }
