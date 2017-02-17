@@ -1,3 +1,35 @@
+commit 05bdd7d2de82d4d4fa22409b363cd918386c412c
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Feb 14 17:42:58 2017 +0000
+
+    fix double quotes
+
+commit 9464a844bf0104231708b9a5dc97732e85a2662a
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Feb 14 17:30:30 2017 +0000
+
+    "$@"
+
+commit bdc9504356e4b98aa3ac9988c07e073e5879d2aa
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Feb 10 15:47:50 2017 +0000
+
+    remove faketime from Build-Depends:
+    
+    since no longer used for reproducible builds
+
+commit 512d856acd725ddf32506cf0159ad8c252d56f15
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Feb 10 15:35:22 2017 +0000
+
+    remove debian/gain-root-command workaround
+
+commit 51e34b6344140f6797e78092694a73deb923189e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jan 15 15:29:54 2017 +0000
+
+    bumped changelog version
+
 commit 54575917a517f6d15a6779b2b562a7bb87ef613a
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Sun Jan 15 08:35:30 2017 +0100
