@@ -143,6 +143,9 @@ unbuffered_sed() {
   # GNU sed supports a `-u` option for unbuffered reads.
   sed -nu "$@" &
   wait "$!"
+
+  sleep 1 &
+  wait "$!"
 }
 
 
