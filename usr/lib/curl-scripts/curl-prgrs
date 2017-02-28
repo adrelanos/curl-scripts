@@ -136,29 +136,13 @@ curl_pid="$!"
 
 # By default, the operating system will buffer reads from the progress
 # FIFO into chunks. However, we want to process the progress updates as
-# soon as they are received. The `unbuffered_sed` function wraps sed with
-# the right options for bypassing buffering on the current platform.
+# soon as they are received.
 unbuffered_sed() {
   trap "signal_sighup" SIGHUP
 
   # GNU sed supports a `-u` option for unbuffered reads.
-  if echo | sed -u >/dev/null 2>&1; then
-    sed -nu "$@" &
-    wait "$!"
-
-  # BSD sed supports a `-l` option for line-buffered reads.
-  elif echo | sed -l >/dev/null 2>&1; then
-    sed -nl "$@" &
-    wait "$!"
-
-  # If we don't have GNU or BSD sed, we can clumsily hack around the
-  # operating system's buffer by padding each line of output with a
-  # large number of trailing spaces.
-  else
-    local pad="$(printf "\n%512s" "")"
-    sed -ne "s/$/\\${pad}/" "$@" &
-    wait "$!"
-  fi
+  sed -nu "$@" &
+  wait "$!"
 }
 
 
