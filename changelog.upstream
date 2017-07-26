@@ -1,3 +1,31 @@
+commit 2e762eb5fffb61b1608df1365f7344bfd175bfec
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Feb 28 16:09:39 2017 +0000
+
+    Revert "sleep after sed for one second to lower CPU usage"
+    
+    This reverts commit 6a49d82ad58f15eb7444e8ac82dc871ba73a7694.
+
+commit 6a49d82ad58f15eb7444e8ac82dc871ba73a7694
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Feb 28 15:58:35 2017 +0000
+
+    sleep after sed for one second to lower CPU usage
+
+commit 921b59be69b98529f37991203567bf154de2082f
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Tue Feb 28 16:48:12 2017 +0100
+
+    remove inefficient code for platform detection
+    
+    only support gnu sed
+
+commit 9a9336a5370db69dbda26011da7219a166d19926
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Fri Feb 17 13:57:26 2017 +0000
+
+    bumped changelog version
+
 commit 05bdd7d2de82d4d4fa22409b363cd918386c412c
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Tue Feb 14 17:42:58 2017 +0000
