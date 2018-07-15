@@ -171,7 +171,9 @@ print_progress() {
     ## due to unknown bug.
     ## Added '2>/dev/null' to avoid log spam
     ## 'tput: No value for $TERM and no -T specified' because of above.
-    local columns="$(tput -Tdumb cols 2>/dev/null)"
+    if [ "$columns" = "" ]; then
+      columns="$(tput -Tdumb cols 2>/dev/null)"
+    fi
     local width=$(( $columns - 10 ))
     local on=$(( $bytes * $width / $length ))
     local off=$(( $width - $on ))
