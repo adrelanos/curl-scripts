@@ -1,3 +1,21 @@
+commit d4fe4917e25f4b9f74955eb9569478403f4142f8
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 15 20:11:20 2018 +0800
+
+    avoid needlessly forking to `tput` during each loop iteration
+
+commit 1fdae0b44a421f08b02f568c5c2a3349b2124227
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Sun Jul 15 20:07:52 2018 +0800
+
+    avoid 'tput: No value for $TERM and no -T specified' log spam
+
+commit b9f8fcc787a5ef65faf856f6ebb4c83ea46b389e
+Author: Patrick Schleizer <adrelanos@riseup.net>
+Date:   Thu Feb 1 15:01:52 2018 +0000
+
+    bumped changelog version
+
 commit 49d5978c0cd16cbae0ec49c8f6f4ec761d5d0854
 Author: Patrick Schleizer <adrelanos@riseup.net>
 Date:   Mon Jan 29 15:50:17 2018 +0000
