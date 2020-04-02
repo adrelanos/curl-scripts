@@ -79,7 +79,7 @@ Comment: Downloaded from:
          http://metadata.ftp-master.debian.org/changelogs//main/c/curl/curl_7.26.0-1+wheezy9_copyright
          http://www.webcitation.org/6PnNBAxkv
 Copyright: 1996-2012, Daniel Stenberg <daniel@haxx.se>
-           2018 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
+           2018 - 2020 ENCRYPTED SUPPORT LP <adrelanos@riseup.net>
 License: curl
  All rights reserved.
  .
