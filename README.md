@@ -1,6 +1,6 @@
 # Scripts for curl #
 
-Contains a script for curl progress bar in terninal. Includes another script
+Contains a script for curl progress bar in terminal. Includes another script
 to convert curl exit codes to curl status messages. Implemented in bash.
 Common code that is often required by other scripts.
 ## How to install `curl-scripts` using apt-get ##
